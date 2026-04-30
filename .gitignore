@@ -1,0 +1,22 @@
+
+# Secrets
+.env
+*.env
+
+# FAISS index — auto rebuild hogi
+storage/
+
+# Database
+chat.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Large model files
+*.bin
+*.safetensors
+
+# Colab
+.ipynb_checkpoints/

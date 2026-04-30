@@ -1,0 +1,16 @@
+streamlit
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-huggingface
+langchain-core
+faiss-cpu
+sentence-transformers
+transformers
+torch
+pypdf
+nest-asyncio
+requests
+pydantic
+python-dotenv
