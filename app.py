@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # ─── API Config ────────────────────────────────────────────
-API_URL = "http://localhost:8000"  # FastAPI ka URL
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 def api_ask(session_id: str, question: str) -> dict:
     resp = requests.post(

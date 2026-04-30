@@ -1,0 +1,37 @@
+
+version: "3.8"
+
+services:
+
+  api:
+    build: .
+    container_name: ai_law_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./storage:/app/storage
+      - ./data:/app/data
+      - ./chat.db:/app/chat.db
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  streamlit:
+    build: .
+    container_name: ai_law_streamlit
+    ports:
+      - "8501:8501"
+    command: streamlit run app.py --server.port 8501 --server.headless true
+    environment:
+      - API_URL=http://api:8000   # ← Docker network mein "api" service name use hoga
+    depends_on:
+      api:
+        condition: service_healthy
+    env_file:
+      - .env
+    restart: unless-stopped
