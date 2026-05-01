@@ -1,16 +1,24 @@
-streamlit
-fastapi
-uvicorn
-langchain
-langchain-community
-langchain-huggingface
-langchain-core
-faiss-cpu
-sentence-transformers
-transformers
-torch
-pypdf
-nest-asyncio
-requests
-pydantic
-python-dotenv
+# API + UI
+streamlit==1.32.0
+fastapi==0.110.0
+uvicorn==0.29.0
+nest-asyncio==1.6.0
+requests==2.31.0
+pydantic==2.6.4
+python-dotenv==1.0.1
+
+# LangChain
+langchain==0.1.16
+langchain-community==0.0.38
+langchain-huggingface==0.0.3
+
+# Vector Store
+faiss-cpu==1.8.0
+
+# Embeddings + Model
+sentence-transformers==2.7.0
+transformers==4.40.0
+torch==2.2.2
+
+# PDF
+pypdf==4.2.0

@@ -3,6 +3,7 @@ import streamlit as st
 import uuid
 import logging
 import requests
+import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

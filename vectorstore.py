@@ -12,7 +12,8 @@ import config
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-DEFAULT_PDF = "/content/ai_law_advisor_colab/data/the_constitution_of_india.pdf"
+import config
+DEFAULT_PDF = config.PDF_PATH
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 150
 

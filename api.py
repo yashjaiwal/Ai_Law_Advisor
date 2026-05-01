@@ -1,7 +1,6 @@
 
-import sys
-import os
-sys.path.insert(0, "/content/ai_law_advisor_colab")
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import logging
 import uvicorn
@@ -63,7 +62,7 @@ def background_init():
             from vectorstore import build_index, reset_index
             reset_index()
 
-            pdf_path = "/content/ai_law_advisor_colab/data/the_constitution_of_india.pdf"
+            pdf_path = config.PDF_PATH
 
             if not os.path.exists(pdf_path):
                 logger.error(f"❌ PDF nahi mila: {pdf_path}")
