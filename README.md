@@ -9,6 +9,12 @@
 
 ---
 
+## 🌐 Live Demo
+
+👉 **[Try it here: huggingface.co/spaces/Callmeyash11/Ai_Law_advisor](https://huggingface.co/spaces/Callmeyash11/Ai_Law_advisor)**
+
+---
+
 ## 📌 Table of Contents
 
 - [About](#about)
