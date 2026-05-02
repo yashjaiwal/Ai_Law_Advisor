@@ -108,7 +108,6 @@ Ai_Law_Advisor/
 ├── 📄 start.sh             # Startup Script (FastAPI + Streamlit)
 ├── 📄 requirements.txt     # Python Dependencies
 ├── 📄 .gitignore           # Git Ignore Rules
-├── 📄 .dockerignore        # Docker Ignore Rules
 │
 └── 📁 data/
     └── the_constitution_of_india.pdf   # Source Document
@@ -353,14 +352,4 @@ This tool is for **informational and educational purposes only**.
 [![GitHub](https://img.shields.io/badge/GitHub-yashjaiwal-black?style=flat&logo=github)](https://github.com/yashjaiwal)
 [![HuggingFace](https://img.shields.io/badge/🤗-Callmeyash11-orange?style=flat)](https://huggingface.co/Callmeyash11)
 
----
 
-## 📄 License
-
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
-
----
-
-<div align="center">
-  <sub>Built with ❤️ for HackDiwas 3.0 | Team Gradient Gang</sub>
-</div>
