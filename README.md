@@ -5,7 +5,6 @@
 [![HuggingFace Space](https://img.shields.io/badge/🤗%20HuggingFace-Space-blue?style=for-the-badge)](https://huggingface.co/spaces/Callmeyash11/Ai_Law_advisor)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/yashjaiwal/Ai_Law_Advisor)
 [![Model](https://img.shields.io/badge/🤖%20Model-legal--clean--model-orange?style=for-the-badge)](https://huggingface.co/Callmeyash11/legal-clean-model)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ---
 
@@ -39,8 +38,6 @@ Unlike general-purpose chatbots, this system:
 - **Never hallucinates** — answers are strictly grounded in retrieved constitutional text
 - **Remembers context** — maintains conversation history per session
 - **Scales cleanly** — decoupled FastAPI backend + Streamlit frontend
-
-> Built for **HackDiwas 3.0** by **Team Gradient Gang** 🏆 (Top 17 Teams)
 
 ---
 
@@ -312,18 +309,6 @@ POST /session/new
 | **Memory** | SQLite | Built-in |
 | **Containerization** | Docker + Compose | Latest |
 | **Deployment** | HuggingFace Spaces | — |
-
----
-
-## 🏆 Hackathon
-
-| Field | Details |
-|-------|---------|
-| **Event** | HackDiwas 3.0 |
-| **Team Name** | Gradient Gang |
-| **Team ID** | UUHD3046 |
-| **Project** | AI Law Adversary |
-| **Result** | 🏆 Top 17 Teams Selected |
 
 ---
 
