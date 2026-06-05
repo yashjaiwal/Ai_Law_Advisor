@@ -110,3 +110,4 @@ def get_answer(session_id: str, question: str) -> dict:
         "source_found": True,
         "session_id": session_id,
     }
+
