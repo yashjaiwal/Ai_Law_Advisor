@@ -1,4 +1,3 @@
-
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -111,7 +110,6 @@ async def health():
 # ─── Ask Question ──────────────────────────────────────────
 @app.post("/ask", response_model=AnswerResponse)
 async def ask(req: QuestionRequest):
-    # Ready nahi hai toh wait karo
     if not app.state.ready:
         raise HTTPException(
             status_code=503,
@@ -127,10 +125,11 @@ async def ask(req: QuestionRequest):
             session_id=session_id,
         )
     except ValueError as e:
+        logger.error(f"ValueError in /ask: {e}")  # ← log add karo
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        logger.error(f"Error: {e}")
-        raise HTTPException(status_code=500, detail="Internal server error")
+        logger.error(f"Exception in /ask: {type(e).__name__}: {e}")  # ← better log
+        raise HTTPException(status_code=500, detail=str(e))  # ← actual error show karo
 
 # ─── Get History ───────────────────────────────────────────
 @app.get("/history/{session_id}", response_model=HistoryResponse)
