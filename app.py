@@ -1,4 +1,3 @@
-
 import streamlit as st
 import uuid
 import logging
@@ -15,7 +14,7 @@ def api_ask(session_id: str, question: str) -> dict:
     resp = requests.post(
         f"{API_URL}/ask",
         json={"question": question, "session_id": session_id},
-        timeout=120,
+        timeout=600,
     )
     resp.raise_for_status()
     return resp.json()
@@ -139,13 +138,11 @@ if not st.session_state.chat:
     with st.chat_message("assistant"):
         st.markdown("""
         👋 **Namaste! I am your AI Legal Advisor.**
-
         I can help you with:
         - 📜 Fundamental Rights (Article 12–35)
         - 🏛️ Structure of Parliament & Government
         - ⚖️ Directive Principles & Duties
         - 🔍 Any Article or Amendment
-
         **Ask your legal question below!**
         """)
 
